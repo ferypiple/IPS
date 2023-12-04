@@ -1,16 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.ScatterChart?>
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.ips.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ips.HelloController">
+   <children>
+      <AnchorPane fx:id="scene" layoutY="82.0" prefHeight="600.0" prefWidth="966.0">
+         <children>
+            <ScatterChart fx:id="diagram" layoutX="457.0" layoutY="13.0" prefHeight="358.0" prefWidth="417.0" title="Средний чек">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </ScatterChart>
+            <Label layoutX="40.0" layoutY="40.0" prefHeight="18.0" prefWidth="155.0" text="Общий объем транзакций:" />
+            <Label layoutX="40.0" layoutY="84.0" prefHeight="18.0" prefWidth="138.0" text="Количество транзакций:" />
+            <Label layoutX="40.0" layoutY="130.0" prefHeight="14.0" prefWidth="106.0" text="Средний чек:" />
+            <Label layoutX="40.0" layoutY="174.0" prefHeight="18.0" prefWidth="138.0" text="Частота транзакций:" />
+            <Label layoutX="40.0" layoutY="228.0" prefHeight="18.0" prefWidth="138.0" text="Отклоненные операции:" />
+            <Button fx:id="startButton" layoutX="716.0" layoutY="383.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="88.0" text="Старт" />
+            <Button fx:id="breakButton" layoutX="598.0" layoutY="383.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="88.0" text="Сломать" />
+            <TextField fx:id="volume" editable="false" layoutX="43.0" layoutY="58.0" />
+            <TextField fx:id="quantity" editable="false" layoutX="43.0" layoutY="102.0" />
+            <TextField fx:id="average" editable="false" layoutX="43.0" layoutY="148.0" />
+            <TextField fx:id="frequency" editable="false" layoutX="43.0" layoutY="195.0" />
+            <TextField fx:id="errors" editable="false" layoutX="43.0" layoutY="249.0" />
+            <CheckBox fx:id="checker" layoutX="57.0" layoutY="14.0" mnemonicParsing="false" text="Режим работы" />
+            <TextField fx:id="events" editable="false" layoutX="26.0" layoutY="465.0" prefHeight="26.0" prefWidth="424.0" />
+            <Label layoutX="26.0" layoutY="425.0" prefHeight="18.0" prefWidth="138.0" text="События:" />
+            <Button fx:id="breakButton1" layoutX="477.0" layoutY="382.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="88.0" text="Транзакции" />
+            <Button fx:id="repairButton1" layoutX="26.0" layoutY="374.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" text="Проверка" />
+            <Button fx:id="repairButton2" layoutX="164.0" layoutY="374.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" text="Починить" />
+            <TableView fx:id="tableView" layoutX="477.0" layoutY="415.0" prefHeight="170.0" prefWidth="455.0" />
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="680.0" layoutY="14.0" prefHeight="68.0" prefWidth="137.0" text="Байков Богдан">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="timeLabel" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="68.0" prefWidth="137.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
