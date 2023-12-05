@@ -42,9 +42,20 @@
             <Button fx:id="repairButton1" layoutX="26.0" layoutY="374.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" text="Проверка" />
             <Button fx:id="repairButton2" layoutX="164.0" layoutY="374.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" text="Починить" />
             <TableView fx:id="tableView" layoutX="477.0" layoutY="415.0" prefHeight="170.0" prefWidth="455.0" />
+            <Label layoutX="257.0" layoutY="186.0" prefHeight="18.0" prefWidth="138.0" text="Затраты на ремонт:" />
+            <TextField fx:id="spending" editable="false" layoutX="257.0" layoutY="208.0" />
+            <Label layoutX="478.0" layoutY="18.0" text="\$">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="allSpending" editable="false" layoutX="257.0" layoutY="161.0" />
+            <Label layoutX="257.0" layoutY="139.0" prefHeight="18.0" prefWidth="138.0" text="Общие затраты:" />
+            <TextField fx:id="income" editable="false" layoutX="257.0" layoutY="115.0" />
+            <Label layoutX="262.0" layoutY="93.0" prefHeight="18.0" prefWidth="138.0" text="Общие доходы:" />
          </children>
       </AnchorPane>
-      <Label alignment="CENTER" layoutX="680.0" layoutY="14.0" prefHeight="68.0" prefWidth="137.0" text="Байков Богдан">
+      <Label alignment="CENTER" layoutX="680.0" layoutY="14.0" prefHeight="68.0" prefWidth="234.0" text="Байков Богдан ПИ-425Б">
          <font>
             <Font size="20.0" />
          </font>

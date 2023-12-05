@@ -62,6 +62,10 @@ public class HelloController {
 
     @FXML
     private TextField events;
+    @FXML
+    private TextField allSpending;
+    @FXML
+    private TextField income;
 
     @FXML
     private TextField frequency;
@@ -77,6 +81,8 @@ public class HelloController {
 
     @FXML
     private Label timeLabel;
+    @FXML
+    private TextField spending;
 
     private XYChart.Series<String, Number> series;
 
@@ -115,10 +121,11 @@ public class HelloController {
     private String formattedNumber4;
 
     private int quantityRandom;
-    CostItem item1 = new CostItem("МТС", 1000.0);
-    CostItem item2 =  new CostItem("Мегафон", 2000.0);
-    CostItem item3 =   new CostItem("Билайн", 1500.0);
-    CostItem item4 = new CostItem("другое", 1500.0);
+    private int spendingVal;
+    CostItem item1 = new CostItem("МТС", 1000);
+    CostItem item2 =  new CostItem("Мегафон", 2000);
+    CostItem item3 =   new CostItem("Билайн", 1500);
+    CostItem item4 = new CostItem("другое", 1500);
 
     @FXML
     void initialize() {
@@ -146,13 +153,17 @@ public class HelloController {
 
         repairButton1.setOnAction(actionEvent -> repair());
 
-        repairButton2.setOnAction(actionEvent -> repair());
+        repairButton2.setOnAction(actionEvent -> {
+            spendingVal+=10000;
+            spending.setText(spendingVal + "$");
+            repair();
+        });
 
         timeline.setCycleCount(Timeline.INDEFINITE);
 
         timeline.play();
         TableColumn<CostItem, String> companyNameColumn = new TableColumn<>("Название компании");
-        TableColumn<CostItem, Double> expensesColumn = new TableColumn<>("Затраты");
+        TableColumn<CostItem, Double> expensesColumn = new TableColumn<>("Затраты в $");
 
         // Устанавливаем фабрику ячеек для столбцов
         companyNameColumn.setCellValueFactory(new PropertyValueFactory<>("companyName"));
@@ -220,20 +231,26 @@ public class HelloController {
                 }
                 Random random = new Random();
 
-                double value = random.nextDouble(1000);
+                int value = random.nextInt(1000);
                 item1.setExpenses(item1.getExpenses() + value);
-                value = random.nextDouble(1000);
+                value = random.nextInt(1000);
                 item2.setExpenses(item2.getExpenses() + value);
-                value = random.nextDouble(1000);
+                value = random.nextInt(1000);
                 item3.setExpenses(item3.getExpenses() + value);
-                value = random.nextDouble(500);
+                value = random.nextInt(500);
                 item4.setExpenses(item4.getExpenses() + value);
                 tableView.refresh();
                 Double volumeRandom = random.nextDouble(1000000);
-
                 volumeValue = volumeValue + volumeRandom;
+                double spend = volumeValue/100;
+                formattedNumber1 = String.format("%.2f", spend);
+                income.setText(formattedNumber1 +"$");
 
-                volumeBitcoin = volumeValue / 37392.3;
+                formattedNumber1 = String.format("%.2f", spend/50);
+
+                allSpending.setText(formattedNumber1 + "$");
+
+                volumeBitcoin = volumeValue / 40000.0;
 
                 bit.add(volumeBitcoin);
 

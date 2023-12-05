@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db69f2a5-1a53-4213-b939-b30bcfc1d28b" name="Changes" comment="">
+    <list default="true" id="db69f2a5-1a53-4213-b939-b30bcfc1d28b" name="Changes" comment="add project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ips/CostItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ips/CostItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ips/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ips/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ips/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ips/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ips/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ips/hello-view.fxml" afterDir="false" />
     </list>
@@ -42,7 +40,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/arsla/IdeaProjects/bakery"
+    "last_opened_file_path": "C:/Users/arsla/IdeaProjects/IPS"
   }
 }]]></component>
   <component name="RunManager">
@@ -74,7 +72,20 @@
       <option name="presentableId" value="Default" />
       <updated>1700732001488</updated>
     </task>
+    <task id="LOCAL-00001" summary="add project">
+      <option name="closed" value="true" />
+      <created>1701721914293</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701721914293</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add project" />
+    <option name="LAST_COMMIT_MESSAGE" value="add project" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

@@ -2,9 +2,9 @@ package com.example.ips;
 
 public class CostItem {
     private String companyName;
-    private double expenses;
+    private int expenses;
 
-    public CostItem(String companyName, double expenses) {
+    public CostItem(String companyName, int expenses) {
         this.companyName = companyName;
         this.expenses = expenses;
     }
@@ -17,11 +17,11 @@ public class CostItem {
         this.companyName = companyName;
     }
 
-    public double getExpenses() {
+    public int getExpenses() {
         return expenses;
     }
 
-    public void setExpenses(double expenses) {
+    public void setExpenses(int expenses) {
         this.expenses = expenses;
     }
 
