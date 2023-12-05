@@ -72,6 +72,8 @@ public class HelloController {
 
     @FXML
     private TextField quantity;
+    @FXML
+    private TextField profit;
 
     @FXML
     private Button startButton;
@@ -243,12 +245,16 @@ public class HelloController {
                 Double volumeRandom = random.nextDouble(1000000);
                 volumeValue = volumeValue + volumeRandom;
                 double spend = volumeValue/100;
+                double prof = 0;
                 formattedNumber1 = String.format("%.2f", spend);
-                income.setText(formattedNumber1 +"$");
+                income.setText(formattedNumber1 +" $");
 
                 formattedNumber1 = String.format("%.2f", spend/50);
+                prof = spend - spend/50-spendingVal;
 
-                allSpending.setText(formattedNumber1 + "$");
+                allSpending.setText(formattedNumber1 + " $");
+                formattedNumber1 = String.format("%.2f", prof);
+                profit.setText(formattedNumber1 + " $");
 
                 volumeBitcoin = volumeValue / 40000.0;
 

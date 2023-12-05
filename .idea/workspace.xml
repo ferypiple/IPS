@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db69f2a5-1a53-4213-b939-b30bcfc1d28b" name="Changes" comment="add project">
+    <list default="true" id="db69f2a5-1a53-4213-b939-b30bcfc1d28b" name="Changes" comment="some changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ips/CostItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ips/CostItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ips/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ips/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ips/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/ips/hello-view.fxml" afterDir="false" />
     </list>
@@ -80,12 +79,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701721914293</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="some changes">
+      <option name="closed" value="true" />
+      <created>1701764351232</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701764351232</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add project" />
-    <option name="LAST_COMMIT_MESSAGE" value="add project" />
+    <MESSAGE value="some changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some changes" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

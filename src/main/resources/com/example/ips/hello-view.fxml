@@ -53,6 +53,8 @@
             <Label layoutX="257.0" layoutY="139.0" prefHeight="18.0" prefWidth="138.0" text="Общие затраты:" />
             <TextField fx:id="income" editable="false" layoutX="257.0" layoutY="115.0" />
             <Label layoutX="262.0" layoutY="93.0" prefHeight="18.0" prefWidth="138.0" text="Общие доходы:" />
+            <TextField fx:id="profit" editable="false" layoutX="256.0" layoutY="262.0" />
+            <Label layoutX="257.0" layoutY="237.0" prefHeight="18.0" prefWidth="138.0" text="Прибыль:" />
          </children>
       </AnchorPane>
       <Label alignment="CENTER" layoutX="680.0" layoutY="14.0" prefHeight="68.0" prefWidth="234.0" text="Байков Богдан ПИ-425Б">
