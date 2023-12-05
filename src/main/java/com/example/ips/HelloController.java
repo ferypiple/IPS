@@ -80,6 +80,8 @@ public class HelloController {
 
     @FXML
     private TextField volume;
+    @FXML
+    private Label dolarIcon;
 
     @FXML
     private Label timeLabel;
@@ -128,6 +130,7 @@ public class HelloController {
     CostItem item2 =  new CostItem("Мегафон", 2000);
     CostItem item3 =   new CostItem("Билайн", 1500);
     CostItem item4 = new CostItem("другое", 1500);
+    TableColumn<CostItem, Double> expensesColumn;
 
     @FXML
     void initialize() {
@@ -157,7 +160,6 @@ public class HelloController {
 
         repairButton2.setOnAction(actionEvent -> {
             spendingVal+=10000;
-            spending.setText(spendingVal + "$");
             repair();
         });
 
@@ -165,7 +167,7 @@ public class HelloController {
 
         timeline.play();
         TableColumn<CostItem, String> companyNameColumn = new TableColumn<>("Название компании");
-        TableColumn<CostItem, Double> expensesColumn = new TableColumn<>("Затраты в $");
+        expensesColumn = new TableColumn<>("Затраты в $");
 
         // Устанавливаем фабрику ячеек для столбцов
         companyNameColumn.setCellValueFactory(new PropertyValueFactory<>("companyName"));
@@ -233,29 +235,17 @@ public class HelloController {
                 }
                 Random random = new Random();
 
-                int value = random.nextInt(1000);
+                int value = random.nextInt(100000);
                 item1.setExpenses(item1.getExpenses() + value);
-                value = random.nextInt(1000);
+                value = random.nextInt(100000);
                 item2.setExpenses(item2.getExpenses() + value);
-                value = random.nextInt(1000);
+                value = random.nextInt(100000);
                 item3.setExpenses(item3.getExpenses() + value);
-                value = random.nextInt(500);
+                value = random.nextInt(50000);
                 item4.setExpenses(item4.getExpenses() + value);
                 tableView.refresh();
                 Double volumeRandom = random.nextDouble(1000000);
                 volumeValue = volumeValue + volumeRandom;
-                double spend = volumeValue/100;
-                double prof = 0;
-                formattedNumber1 = String.format("%.2f", spend);
-                income.setText(formattedNumber1 +" $");
-
-                formattedNumber1 = String.format("%.2f", spend/50);
-                prof = spend - spend/50-spendingVal;
-
-                allSpending.setText(formattedNumber1 + " $");
-                formattedNumber1 = String.format("%.2f", prof);
-                profit.setText(formattedNumber1 + " $");
-
                 volumeBitcoin = volumeValue / 40000.0;
 
                 bit.add(volumeBitcoin);
@@ -289,13 +279,44 @@ public class HelloController {
                     if (checker.isSelected()) {
                         String formattedNumberbit1 = String.format("%.2f", volumeBitcoin);
                         String formattedNumberbit2 = String.format("%.2f", averageBitcoin);
+                        double spend = volumeBitcoin/100;
+                        double prof;
+                        formattedNumber1 = String.format("%.2f", spend);
+                        income.setText(formattedNumber1 +" ₿");
+                        expensesColumn.setText("Затраты в ₿");
+                        formattedNumber1 = String.format("%.2f", spend/50);
+                        prof = spend - spend/50-spendingVal;
+                        allSpending.setText(formattedNumber1 + " ₿");
+                        formattedNumber1 = String.format("%.2f", prof);
+                        profit.setText(formattedNumber1 + " ₿");
                         volume.setText(formattedNumberbit1 + " ₿");
                         average.setText(formattedNumberbit2 + " ₿");
-
+                        spending.setText(spendingVal/40000 + " ₿");
+                        dolarIcon.setText(" ₿");
+                        item1.setExpenses(item1.getExpenses()/40000);
+                        item2.setExpenses(item2.getExpenses()/40000);
+                        item3.setExpenses(item3.getExpenses()/40000);
+                        item4.setExpenses(item4.getExpenses()/40000);
                     } else {
                         volume.setText(formattedNumber1 + " $");
                         average.setText(formattedNumber3 + " $");
+                        spending.setText(spendingVal + "$");
+                        double spend = volumeValue/100;
+                        double prof;
+                        formattedNumber1 = String.format("%.2f", spend);
+                        income.setText(formattedNumber1 +" $");
+                        expensesColumn.setText("Затраты в $");
+                        formattedNumber1 = String.format("%.2f", spend/50);
+                        prof = spend - spend/50-spendingVal;
 
+                        allSpending.setText(formattedNumber1 + " $");
+                        formattedNumber1 = String.format("%.2f", prof);
+                        profit.setText(formattedNumber1 + " $");
+                        item1.setExpenses(item1.getExpenses());
+                        item2.setExpenses(item2.getExpenses());
+                        item3.setExpenses(item3.getExpenses());
+                        item4.setExpenses(item4.getExpenses());
+                        dolarIcon.setText(" $");
                     }
                     if(i %2 == 0){
                         errors.setText(String.valueOf(errorsValue));

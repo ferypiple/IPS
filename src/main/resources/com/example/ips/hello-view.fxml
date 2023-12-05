@@ -44,7 +44,7 @@
             <TableView fx:id="tableView" layoutX="477.0" layoutY="415.0" prefHeight="170.0" prefWidth="455.0" />
             <Label layoutX="257.0" layoutY="186.0" prefHeight="18.0" prefWidth="138.0" text="Затраты на ремонт:" />
             <TextField fx:id="spending" editable="false" layoutX="257.0" layoutY="208.0" />
-            <Label layoutX="478.0" layoutY="18.0" text="\$">
+            <Label fx:id="dolarIcon" layoutX="478.0" layoutY="18.0" text="\$">
                <font>
                   <Font size="19.0" />
                </font>
